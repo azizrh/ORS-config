@@ -1,0 +1,215 @@
+# OpenRouteService Backend .gitignore
+
+# =============================================
+# ORS Generated Data & Large Files
+# =============================================
+
+# Built routing graphs (very large, rebuild on each deployment)
+ors-docker/graphs/
+graphs/
+
+# OSM data files (large, download separately)
+*.osm.pbf
+*.osm.gz
+*.osm.bz2
+*.osm
+ors-docker/files/*.osm.pbf
+ors-docker/files/*.osm.gz
+
+# Elevation cache files
+ors-docker/elevation_cache/
+elevation_cache/
+
+# Log files
+ors-docker/logs/
+logs/
+*.log
+
+# Temporary files
+ors-docker/tmp/
+tmp/
+
+# =============================================
+# Docker & Container Related
+# =============================================
+
+# Docker volumes (if using named volumes)
+# Uncomment if you switch to Docker volumes
+# docker-volumes/
+
+# Docker override files (for local development)
+docker-compose.override.yml
+docker-compose.local.yml
+
+# =============================================
+# Environment & Configuration
+# =============================================
+
+# Environment variables with sensitive data
+.env
+.env.local
+.env.production
+.env.development
+
+# Backup configuration files
+ors-config.yml.backup
+ors-config.yml.bak
+config/*.backup
+
+# Local configuration overrides
+ors-docker/config/local-*
+ors-docker/config/*-local.yml
+
+# =============================================
+# IDE & Editor Files
+# =============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# =============================================
+# Operating System Files
+# =============================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# =============================================
+# Archive & Backup Files
+# =============================================
+
+# Compressed archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# Deployment packages (exclude from repo, generate fresh)
+ors-deployment.tar.gz
+newORS-*.tar.gz
+backend-*.zip
+
+# Database dumps or backups
+*.sql
+*.dump
+
+# =============================================
+# Streamlit Frontend (if in same repo)
+# =============================================
+
+# Python virtual environment
+env/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit specific
+.streamlit/
+
+# =============================================
+# Documentation Build
+# =============================================
+
+# Generated documentation
+docs/_build/
+site/
+
+# =============================================
+# Monitoring & Analytics
+# =============================================
+
+# Prometheus data
+prometheus_data/
+
+# Grafana data
+grafana_data/
+
+# =============================================
+# SSL Certificates (Security)
+# =============================================
+
+# SSL certificates and keys
+*.pem
+*.key
+*.crt
+*.cert
+ssl/
+
+# =============================================
+# Testing & Development
+# =============================================
+
+# Test results
+test-results/
+coverage/
+.coverage
+*.cover
+
+# Performance test data
+performance_tests/
+load_test_results/
+
+# Development scripts
+dev-scripts/
+local-dev/
+
+# =============================================
+# Example Keep Files (Comment/Uncomment)
+# =============================================
+
+# Keep example configurations (uncomment to include)
+# !ors-docker/config/ors-config.example.yml
+# !docker-compose.example.yml
+
+# Keep small sample OSM files (uncomment to include)
+# !ors-docker/files/example-*.osm.gz
+
+# =============================================
+# Custom Local Files
+# =============================================
+
+# Add your custom patterns here
+# local/
+# personal/
+# scratch/
