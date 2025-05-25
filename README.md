@@ -11,7 +11,7 @@ A complete OpenRouteService backend setup with routing, isochrones, matrix, and 
 
 ### 1. Clone & Setup
 ```bash
-git clone <your-repo-url>
+gh repo clone azizrh/ORS-config
 cd newORS
 ```
 
